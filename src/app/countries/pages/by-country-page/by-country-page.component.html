@@ -1,1 +1,20 @@
-<p>by-country-page works!</p>
+<h2>By Country</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <shared-search-box 
+            [placeHolder]="placeHolder"
+            (onDebounce)="searchCountry($event)"
+            [initialValue]="initialValue">
+        </shared-search-box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <hr>
+        <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+        <country-table [countries]="countries"></country-table>
+    </div>
+</div>

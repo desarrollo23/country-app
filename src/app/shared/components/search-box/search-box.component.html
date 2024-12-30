@@ -1,6 +1,8 @@
+<!-- (keyup.enter)="onSearchCapital(txtInputValue.value)" -->
 <input 
     type="text" 
     [placeholder]="placeHolder" 
     class="form-control"
-    (keyup.enter)="onSearchCapital(txtInputValue.value)"
-    #txtInputValue>
+    (keyup)="onKeyPress(txtInputValue.value)"
+    #txtInputValue
+    [value]="initialValue">
